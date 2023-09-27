@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="your-blog-logo.png" alt="Blog Logo" width="200">
+  <img src="https://raw.githubusercontent.com/FREDVUNI/next-blog/main/src/app/favicon.ico" alt="Blog Logo" width="200">
 </div>
 
 # Next.js Blog with Dark/Light Theme 🌙☀️
