@@ -1,6 +1,6 @@
-<div align="center">
+<p align="center">
   <img src="https://raw.githubusercontent.com/FREDVUNI/next-blog/main/src/app/favicon.ico" alt="Blog Logo" width="200">
-</div>
+</p>
 
 # Next.js Blog with Dark/Light Theme 🌙☀️
 
