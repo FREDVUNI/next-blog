@@ -12,7 +12,11 @@ const Navbar = () => {
         <Image src="./youtube.png" alt="youtube" width={24} height={24} />
       </div>
       <div className={styles.logo}>next blog</div>
-      <div className={styles.links}></div>
+      <div className={styles.links}>
+        <Link href="/">Home</Link>
+        <Link href="/">Contact</Link>
+        <Link href="/">About</Link>
+      </div>
     </div>
   );
 };
