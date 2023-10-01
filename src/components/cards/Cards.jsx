@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./card.module.css";
+import styles from "./cards.module.css";
 import Pagination from "../pagination/Pagination";
 
 const Cards = () => {
