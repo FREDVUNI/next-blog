@@ -3,9 +3,9 @@ import styles from "./auth.module.css";
 import Link from "next/link";
 
 const Auth = () => {
-  const auth = "not-authenticated";
+  const auth = "not-authenticateds";
   return (
-    <div className={styles.container}>
+    <>
       {auth === "not-authenticated" ? (
         <Link href={"/"}>Login</Link>
       ) : (
@@ -14,7 +14,7 @@ const Auth = () => {
           <span className={styles.Link}>Logout</span>
         </>
       )}
-    </div>
+    </>
   );
 };
 
