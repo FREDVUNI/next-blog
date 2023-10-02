@@ -3,10 +3,10 @@ import styles from "./auth.module.css";
 import Link from "next/link";
 
 const Auth = () => {
-  const auth = "authenticated";
+  const auth = "not-authenticated";
   return <div className={styles.container}>
     {
-      auth === "authenticated" ? <Link href={"/"}>Login</Link>:
+      auth === "not-authenticated" ? <Link href={"/"}>Login</Link>:
     }
   </div>;
 };
