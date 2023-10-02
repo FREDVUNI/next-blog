@@ -7,6 +7,7 @@
 .social {
   display: flex;
   gap: 10;
+  flex: 1;
 }
 .links {
   display: flex;
@@ -17,4 +18,5 @@
   flex: 1;
   text-align: center;
   font-size: 36px;
+  font-weight: bold;
 }
