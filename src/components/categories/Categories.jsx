@@ -3,6 +3,7 @@ import styles from "./categories.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { categories } from "./data";
+import capitalizeWord from "@/utils";
 
 const Categories = () => {
   return (
@@ -24,8 +25,7 @@ const Categories = () => {
                   height={32}
                   className={styles[category.category]}
                 />
-                {category.category.charAt(0).toUpperCase() +
-                  category.category.slice(1)}
+                {capitalizeWord(category.category)}
               </Link>
             ))}
         </div>
