@@ -1,8 +1,37 @@
 import React from "react";
 import styles from "./categories.module.css";
+import Link from "next/link";
+import Image from "next/image";
+import { categories } from "./data";
 
 const Categories = () => {
-  return <div className={styles.container}>Categories</div>;
+  return (
+    <div className={styles.container}>
+      <h1 className={styles.title}>Popular Categories</h1>
+      <div className={styles.categories}>
+        <div className={styles.category}>
+          {categories &&
+            categories.map((category) => (
+              <Link
+                href={`/blog?category=${category.category}`}
+                className={`${styles.category} ${styles.style}`}
+                key={category.category}
+              >
+                <Image
+                  src={category.image}
+                  alt=""
+                  width={32}
+                  height={32}
+                  className={styles[category.category]}
+                />
+                {category.category.charAt(0).toUpperCase() +
+                  category.category.slice(1)}
+              </Link>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Categories;
