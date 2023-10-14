@@ -6,10 +6,10 @@ import Image from "next/image";
 import { ThemeContext } from "@/context/ThemeContext";
 
 const ThemeToggle = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme, toggle } = useContext(ThemeContext);
   console.log(theme);
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={toggle}>
       <Image
         src="/moon.png"
         alt="dark"
