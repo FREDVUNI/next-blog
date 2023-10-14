@@ -10,20 +10,23 @@ const ThemeToggle = () => {
   console.log(theme);
   return (
     <div className={styles.container} onClick={toggle}>
-      <Image
-        src="/moon.png"
-        alt="dark"
-        width={24}
-        height={14}
-        className={styles.moon}
-      />
-      <Image
-        src="/sun.png"
-        alt="light"
-        width={24}
-        height={14}
-        className={styles.sun}
-      />
+      {theme === "light" ? (
+        <Image
+          src="/moon.png"
+          alt="dark"
+          width={24}
+          height={14}
+          className={styles.moon}
+        />
+      ) : (
+        <Image
+          src="/sun.png"
+          alt="light"
+          width={24}
+          height={14}
+          className={styles.sun}
+        />
+      )}
     </div>
   );
 };
