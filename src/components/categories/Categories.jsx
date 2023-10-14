@@ -10,25 +10,23 @@ const Categories = () => {
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
       <div className={styles.categories}>
-        <div className={styles.category}>
-          {categories &&
-            categories.map((category) => (
-              <Link
-                href={`/blog?category=${category.category}`}
-                className={`${styles.category} ${styles.style}`}
-                key={category.category}
-              >
-                <Image
-                  src={category.image}
-                  alt=""
-                  width={32}
-                  height={32}
-                  className={styles[category.category]}
-                />
-                {capitalizeWord(category.category)}
-              </Link>
-            ))}
-        </div>
+        {categories &&
+          categories.map((category) => (
+            <Link
+              href={`/blog?category=${category.category}`}
+              className={`${styles.category} ${styles.style}`}
+              key={category.id}
+            >
+              <Image
+                src={category.image}
+                alt=""
+                width={32}
+                height={32}
+                className={`${styles.image}`}
+              />
+              {capitalizeWord(category.category)}
+            </Link>
+          ))}
       </div>
     </div>
   );
