@@ -14,7 +14,7 @@ const Categories = () => {
           categories.map((category) => (
             <Link
               href={`/blog?category=${category.category}`}
-              className={`${styles.category} ${styles.style}`}
+              className={`${styles.category} ${styles[category.category]}`}
               key={category.id}
             >
               <Image
