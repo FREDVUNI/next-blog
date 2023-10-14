@@ -1,7 +1,20 @@
-import { createContext } from "react";
+"use client";
 
+import { createContext, useState } from "react";
 export const ThemeContext = createContext();
 
+const getFromLocalStorage = () => {
+  if (typeof window !== "undefined") {
+    const value = localStorage.getItem("theme");
+    return value || "light";
+  }
+};
+
 export const ThemeProvider = ({ children }) => {
-  <ThemeContext.Provider>{children}</ThemeContext.Provider>;
+  const [theme, setTheme] = useState(() => {
+    return getFromLocalStorage();
+  });
+  <ThemeContext.Provider value={{ theme, setTheme }}>
+    {children}
+  </ThemeContext.Provider>;
 };
