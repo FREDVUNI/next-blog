@@ -19,7 +19,7 @@ const MenuPosts = ({ withImage }) => {
           </h3>
           <div className={styles.details}>
             <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> -- 11.02.03</span>
+            <span className={styles.date}> - 11.02.03</span>
           </div>
         </div>
       </Link>
@@ -38,7 +38,7 @@ const MenuPosts = ({ withImage }) => {
           </h3>
           <div className={styles.details}>
             <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> -- 11.02.03</span>
+            <span className={styles.date}> - 11.02.03</span>
           </div>
         </div>
       </Link>
@@ -55,7 +55,7 @@ const MenuPosts = ({ withImage }) => {
           </h3>
           <div className={styles.details}>
             <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> -- 11.02.03</span>
+            <span className={styles.date}> - 11.02.03</span>
           </div>
         </div>
       </Link>
@@ -74,7 +74,7 @@ const MenuPosts = ({ withImage }) => {
           </h3>
           <div className={styles.details}>
             <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> -- 11.02.03</span>
+            <span className={styles.date}> - 11.02.03</span>
           </div>
         </div>
       </Link>
@@ -91,7 +91,7 @@ const MenuPosts = ({ withImage }) => {
           </h3>
           <div className={styles.details}>
             <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> -- 11.02.03</span>
+            <span className={styles.date}> - 11.02.03</span>
           </div>
         </div>
       </Link>
