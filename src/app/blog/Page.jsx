@@ -1,4 +1,4 @@
-import styles from "./blog.module.css";
+import styles from "./blogpage.module.css";
 import Cards from "@/components/cards/Cards";
 import Menu from "@/components/menu/Menu";
 
