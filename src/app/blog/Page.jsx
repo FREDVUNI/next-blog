@@ -2,10 +2,7 @@ import styles from "./blog.module.css";
 import Cards from "@/components/cards/Cards";
 import Menu from "@/components/menu/Menu";
 
-const Page = ({ searchParams }) => {
-  const page = parseInt(searchParams.page) || 1;
-  const { category } = searchParams;
-
+const BlogPage = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{category} Blog</h1>
@@ -17,4 +14,4 @@ const Page = ({ searchParams }) => {
   );
 };
 
-export default Page;
+export default BlogPage;
