@@ -1,11 +1,11 @@
-import styles from "./blogpage.module.css";
+import styles from "./blogPage.module.css";
 import Cards from "@/components/cards/Cards";
 import Menu from "@/components/menu/Menu";
 
 const BlogPage = () => {
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>{category} Blog</h1>
+      <h1 className={styles.title}>Blog</h1>
       <div className={styles.content}>
         <Cards />
         <Menu />
