@@ -32,8 +32,10 @@ jobs:
           # Install the Vercel CLI
           npm install -g vercel
 
-          # Log in to your Vercel account
-          vercel login --token $VERCEL_TOKEN
+          # Log in to your Vercel account (if you haven't already)
+          # You can log in manually by running 'vercel login' in your local environment.
+          # Alternatively, you can log in using 'vercel token set' if you have a token.
+          # vercel login
 
           # Deploy your app to Vercel
           vercel --prod
