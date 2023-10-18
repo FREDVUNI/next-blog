@@ -1,32 +1,37 @@
-import React from "react";
+import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
-import Menu from "@/components/menu/Menu";
 import Image from "next/image";
+import Comments from "@/components/comments/Comments";
 
-const SinglePage = () => {
+const SinglePage = async () => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
           </h1>
           <div className={styles.user}>
             <div className={styles.userImageContainer}>
-              <Image src="/p1.jpeg" alt="" fill className={styles.avatar} />
+              <Image src={"/p1.jpeg"} alt="" fill className={styles.avatar} />
             </div>
             <div className={styles.userTextContainer}>
               <span className={styles.username}>John Doe</span>
-              <span className={styles.date}>10.10.2023</span>
+              <span className={styles.date}>01.01.2024</span>
             </div>
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <Image src="/p1.jpeg" alt="single" fill className={styles.image} />
+          <Image src={"/p1.jpeg"} alt="" fill className={styles.image} />
         </div>
       </div>
       <div className={styles.content}>
-        <div className={styles.post}></div>
+        <div className={styles.post}>
+          <div className={styles.description} />
+          <div className={styles.comment}>
+            <Comments />
+          </div>
+        </div>
         <Menu />
       </div>
     </div>
