@@ -1,0 +1,41 @@
+.container {
+}
+.infoContainer {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.textContainer {
+  flex: 1;
+}
+.title {
+  font-size: 54px;
+  margin-bottom: 50px;
+}
+.userImageContainer {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+}
+.username{
+    font-size: 20px;
+    font-weight: 500;
+}
+.usertextContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--softTextColor);
+}
+.imageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+.image {
+  object-fit: cover;
+}
