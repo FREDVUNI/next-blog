@@ -23,7 +23,7 @@ const Featured = () => {
           <button className={styles.button}>Read More</button>
         </div>
         <div className={styles.imgContainer}>
-          <Image src="/p1.jpeg" alt="" fill className={styles.image} />
+          <Image src="/hero.png" alt="" fill className={styles.image} />
         </div>
       </div>
     </div>
