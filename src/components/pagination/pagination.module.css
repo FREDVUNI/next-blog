@@ -10,6 +10,8 @@
   background-color: crimson;
   color: white;
   cursor: pointer;
+  font-size: 18px;
+  border-radius: 50px;
 }
 
 .button:disabled {
