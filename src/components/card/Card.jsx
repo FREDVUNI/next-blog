@@ -15,7 +15,7 @@ const Card = () => {
           <span className={styles.category}> - CULTURE</span>
         </div>
         <Link href={"/"}>
-          <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+          <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
         </Link>
         <p className={styles.desc}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error
