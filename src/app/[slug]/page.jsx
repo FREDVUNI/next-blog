@@ -1,7 +1,7 @@
-import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
+import Menu from "@/components/menu/Menu";
 
 const SinglePage = async () => {
   return (
