@@ -11,21 +11,9 @@ const ThemeToggle = () => {
   return (
     <div className={styles.container} onClick={toggle}>
       {theme === "light" ? (
-        <Image
-          src="/moon.png"
-          alt="dark"
-          width={24}
-          height={14}
-          className={styles.moon}
-        />
+        <span className={`material-symbols-outlined ${styles.moon}`}>dark_mode</span>
       ) : (
-        <Image
-          src="/sun.png"
-          alt="light"
-          width={24}
-          height={14}
-          className={styles.sun}
-        />
+        <span className={`material-symbols-outlined ${styles.sun}`}>light_mode</span>
       )}
     </div>
   );
