@@ -8,7 +8,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  /* background-color: black; */
   border-radius: 50%;
 }
 .container .sun {
