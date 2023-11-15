@@ -8,7 +8,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: black;
+  /* background-color: black; */
   border-radius: 50%;
 }
 .container .sun {
@@ -17,6 +17,5 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: black;
   border-radius: 50%;
 }
