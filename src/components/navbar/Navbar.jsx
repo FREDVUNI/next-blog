@@ -14,7 +14,10 @@ const Navbar = () => {
         <Image src="/tiktok.png" alt="tiktok" width={24} height={24} />
         <Image src="/youtube.png" alt="youtube" width={24} height={24} />
       </div>
-      <div className={styles.logo}>next blog</div>
+      <div className={styles.logo}>
+        <span class="material-symbols-outlined">linked_services</span>next{" "}
+        <span style={{ color: "crimson" }}>blog</span>
+      </div>
       <div className={styles.links}>
         <Link href="/" className={styles.link}>
           Home
