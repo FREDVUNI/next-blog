@@ -16,7 +16,6 @@ const Navbar = () => {
       </div>
       <div className={styles.logo}>next blog</div>
       <div className={styles.links}>
-        <ThemeToggle />
         <Link href="/" className={styles.link}>
           Home
         </Link>
@@ -27,6 +26,7 @@ const Navbar = () => {
           About
         </Link>
         <Auth />
+        <ThemeToggle />
       </div>
     </div>
   );
