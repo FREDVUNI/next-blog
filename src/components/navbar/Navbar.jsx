@@ -15,7 +15,7 @@ const Navbar = () => {
         <Image src="/youtube.png" alt="youtube" width={24} height={24} />
       </div>
       <div className={styles.logo}>
-        <span class="material-symbols-outlined">linked_services</span>next{" "}
+        <span className="material-symbols-outlined">linked_services</span>next{" "}
         <span style={{ color: "crimson" }}>blog</span>
       </div>
       <div className={styles.links}>
