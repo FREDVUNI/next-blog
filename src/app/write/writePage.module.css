@@ -72,11 +72,12 @@
   position: absolute;
   top: 0px;
   right: 0px;
-  padding: 10px 20px;
   border: none;
-  background-color: #1a8917;
+  background-color: #0070f3;
   color: white;
   cursor: pointer;
-  /* border-radius: 20px; */
-  font-size: 18px;
+  border-radius: 5px;
+  font-size: 18px; 
+  width: 100px;
+  padding: 16px;
 }
