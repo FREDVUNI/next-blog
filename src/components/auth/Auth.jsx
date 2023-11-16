@@ -23,10 +23,10 @@ const Auth = () => {
       {open && (
         <div className={styles.responsiveMenu}>
           <Link href="/">Home</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">About</Link>
+          <Link href="/contact">Contact</Link>
+          <Link href="/about">About</Link>
           {auth === "not-authenticated" ? (
-            <Link href={"/"}>Login</Link>
+            <Link href={"/login"}>Login</Link>
           ) : (
             <>
               <Link href={"/create-post"}>Post</Link>
