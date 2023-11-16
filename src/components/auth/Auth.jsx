@@ -12,7 +12,7 @@ const Auth = () => {
       ) : (
         <>
           <Link href={"/create-post"}>Post</Link>
-          <span className={styles.link}>Logout</span>
+          <Link href={"/logout"} className={styles.link}>Logout</Link>
         </>
       )}
       <div className={styles.burger}>
