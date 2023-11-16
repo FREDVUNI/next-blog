@@ -8,7 +8,7 @@ const Auth = () => {
   return (
     <>
       {auth === "not-authenticated" ? (
-        <Link href={"/"}>Login</Link>
+        <Link href={"/login"}>Login</Link>
       ) : (
         <>
           <Link href={"/create-post"}>Post</Link>
