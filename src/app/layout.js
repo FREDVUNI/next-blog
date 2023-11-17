@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
       <body className={`${poppins.className}`}>
         <AuthProvider>
           <ThemeContextProvider>
-            <ThemeProvider>
+            <ThemeProvider> 
               <div className="container">
                 <div className="wrapper">
                   <Navbar />
