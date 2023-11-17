@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./blogPage.module.css";
 import Cards from "@/components/cards/Cards";
 import Menu from "@/components/menu/Menu";
