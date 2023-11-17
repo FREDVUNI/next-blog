@@ -1,3 +1,5 @@
+"use client";
+
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
