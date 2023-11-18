@@ -11,7 +11,7 @@ const Auth = () => {
         <Link href={"/login"}>Login</Link>
       ) : (
         <>
-          <Link href={"/create-post"}>Post</Link>
+          <Link href={"/write"}>Post</Link>
           <Link href={"/logout"} className={styles.link}>
             Logout
           </Link>
@@ -31,7 +31,7 @@ const Auth = () => {
             <Link href={"/login"}>Login</Link>
           ) : (
             <>
-              <Link href={"/create-post"}>Post</Link>
+              <Link href={"/write"}>Post</Link>
               <span className={styles.link}>Logout</span>
             </>
           )}
