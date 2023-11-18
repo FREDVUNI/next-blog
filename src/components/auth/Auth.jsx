@@ -1,7 +1,9 @@
+"use client";
+
 import React from "react";
 import styles from "./auth.module.css";
 import Link from "next/link";
-import { signOut,useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 
 const Auth = () => {
   const { status } = useSession();
@@ -13,9 +15,9 @@ const Auth = () => {
       ) : (
         <>
           <Link href={"/write"}>Post</Link>
-          <Link href={"/logout"} className={styles.link}>
+          <span onClick={() => signOut} className={styles.link}>
             Logout
-          </Link>
+          </span>
         </>
       )}
       <div className={styles.burger}>
