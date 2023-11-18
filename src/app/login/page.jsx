@@ -7,7 +7,7 @@ import { signIn, useSession } from "next-auth/react";
 const Loginpage = () => {
   const { data, status } = useSession();
 
-  console.log(data);
+  console.log({"data":data,"status": status});
   console.log(status);
   return (
     <div className={styles.container}>
