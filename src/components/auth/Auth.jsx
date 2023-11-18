@@ -1,13 +1,14 @@
 import React from "react";
 import styles from "./auth.module.css";
 import Link from "next/link";
+import { signOut,useSession } from "next-auth/react";
 
 const Auth = () => {
-  const auth = "authenticated";
+  const { status } = useSession();
   const open = "";
   return (
     <>
-      {auth !== "authenticated" ? (
+      {status !== "authenticated" ? (
         <Link href={"/login"}>Login</Link>
       ) : (
         <>
@@ -27,7 +28,7 @@ const Auth = () => {
           <Link href="/">Home</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/about">About</Link>
-          {auth !== "authenticated" ? (
+          {status !== "authenticated" ? (
             <Link href={"/login"}>Login</Link>
           ) : (
             <>
