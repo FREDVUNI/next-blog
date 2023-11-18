@@ -2,7 +2,7 @@ const { PrismaClient } = require("@prisma/client");
 let prisma;
 
 if (process.env.NODE_ENV) {
-  prisma = PrismaClient();
+  prisma = new PrismaClient();
 } else {
   if (!global.prisma) {
     global.prisma = new PrismaClient();
