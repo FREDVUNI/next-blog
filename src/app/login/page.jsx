@@ -8,7 +8,6 @@ const Loginpage = () => {
   const { data, status } = useSession();
 
   console.log({"data":data,"status": status});
-  console.log(status);
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
