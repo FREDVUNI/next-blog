@@ -10,7 +10,7 @@ const Auth = () => {
   const open = "";
   return (
     <>
-      {status !== "authenticated" ? (
+      {status === "unauthenticated" ? (
         <Link href={"/login"}>Login</Link>
       ) : (
         <>
@@ -30,7 +30,7 @@ const Auth = () => {
           <Link href="/">Home</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/about">About</Link>
-          {status !== "authenticated" ? (
+          {status === "unauthenticated" ? (
             <Link href={"/login"}>Login</Link>
           ) : (
             <>
