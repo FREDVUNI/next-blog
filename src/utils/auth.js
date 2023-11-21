@@ -9,19 +9,10 @@ export const authOptions = {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-      checks: ['none'],
-      authorization: {
-        params: {
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code"
-        }
-      }
     }),
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
-      checks: ['none']
     }),
   ],
 };
