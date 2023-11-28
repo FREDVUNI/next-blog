@@ -64,11 +64,10 @@ The blog will be available at `http://localhost:3000`.
 
 This blog supports both dark 🌙 and light ☀️ themes. Users can switch between themes by clicking a theme switcher button. Styles and themes can be customized in the `styles/` directory.
 
-Setting up Prisma with Google Auth and MongoDB typically involves a few steps. Here's a general guideline for creating a README file:
 
 ---
 
-# Setting up Prisma with Google Auth and MongoDB
+## Setting up Prisma with Google Auth and MongoDB
 
 This guide outlines the steps required to integrate Prisma with Google Authentication while utilizing MongoDB as the database.
 
