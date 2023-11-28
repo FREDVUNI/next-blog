@@ -64,6 +64,101 @@ The blog will be available at `http://localhost:3000`.
 
 This blog supports both dark 🌙 and light ☀️ themes. Users can switch between themes by clicking a theme switcher button. Styles and themes can be customized in the `styles/` directory.
 
+Setting up Prisma with Google Auth and MongoDB typically involves a few steps. Here's a general guideline for creating a README file:
+
+---
+
+# Setting up Prisma with Google Auth and MongoDB
+
+This guide outlines the steps required to integrate Prisma with Google Authentication while utilizing MongoDB as the database.
+
+## Prerequisites
+- Node.js installed
+- Prisma CLI installed globally (`npm install prisma -g`)
+- MongoDB database set up
+- Google Developer Console project and OAuth 2.0 credentials
+
+## Steps
+
+### 1. Clone Repository
+Clone the repository to your local machine:
+
+```bash
+git clone <repository_url>
+cd <repository_folder>
+```
+
+### 2. Install Dependencies
+Install project dependencies using npm or yarn:
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Configure Prisma
+Edit the Prisma schema to define your data model (`schema.prisma`):
+
+```prisma
+// schema.prisma
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id        String @id @default(uuid())
+  email     String @unique
+  name      String?
+  // Add other fields as needed
+}
+```
+
+### 4. Generate Prisma Client
+Run the Prisma CLI to generate the Prisma Client:
+
+```bash
+npx prisma generate
+# or
+prisma generate
+```
+
+### 5. Configure Google Authentication
+Set up the Google Developer Console project and obtain OAuth 2.0 credentials (client ID and secret).
+
+### 6. Implement Authentication
+Integrate Google Authentication using libraries like Passport.js or the Google Auth library.
+
+### 7. Connect Prisma with MongoDB
+Update the `.env` file with your MongoDB connection string:
+
+```
+DATABASE_URL="mongodb://<username>:<password>@<host>:<port>/<database>"
+```
+
+### 8. Start the Application
+Run the application:
+
+```bash
+npm start
+# or
+yarn start
+```
+
+Visit `http://localhost:3000` in your browser to access the application.
+
+## Additional Notes
+- Ensure proper error handling and security measures for authentication.
+- Refer to Prisma and MongoDB documentation for detailed configurations and usage.
+
+---
+
+
 ## 🌐 API Routes
 
 API routes in the `api/` directory handle CRUD operations for blog posts. You can customize and extend these routes as needed.
