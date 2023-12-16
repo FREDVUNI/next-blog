@@ -5,7 +5,22 @@ import Image from "next/image";
 import { categories } from "./data";
 import capitalizeWord from "@/utils";
 
-const Categories = () => {
+const getCategories = async () => {
+  try {
+    const res = await fetch("http://localhost:3000/api/categories", {
+      cache: "no-store",
+    });
+    if (!res.ok) {
+      throw new Error("No categories found.");
+    }
+    return res.json();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const Categories = async () => {
+  const categories = await getCategories();
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Popular Categories</h1>
@@ -13,18 +28,18 @@ const Categories = () => {
         {categories &&
           categories.map((category) => (
             <Link
-              href={`/blog?category=${category.category}`}
-              className={`${styles.category} ${styles[category.category]}`}
+              href={`/blog?category=${category.title}`}
+              className={`${styles.category} ${styles[category.title]}`}
               key={category.id}
             >
               <Image
-                src={category.image}
-                alt=""
+                src={category.img}
+                alt="category"
                 width={32}
                 height={32}
                 className={`${styles.image}`}
               />
-              {capitalizeWord(category.category)}
+              {capitalizeWord(category.title)}
             </Link>
           ))}
       </div>
