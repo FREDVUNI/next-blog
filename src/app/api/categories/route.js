@@ -10,7 +10,7 @@ export const GET = async () => {
     return new NextResponse(
       JSON.stringify(
         {
-          message: "something is wrong",
+          message: "something went wrong",
         },
         {
           status: 500,
