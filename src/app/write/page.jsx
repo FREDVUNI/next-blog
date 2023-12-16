@@ -1,12 +1,13 @@
 "use client";
 
-import React from "react";
+import React,{useState} from "react";
 import styles from "./writePage.module.css";
 import Image from "next/image";
 import "react-quill/dist/quill.bubble.css";
 import ReactQuill from "react-quill";
 
 const Writepage = () => {
+  const [value,setValue] = useState("");
   return (
     <div className={styles.container}>
       <input type="text" placeholder="Title" className={styles.input} />
