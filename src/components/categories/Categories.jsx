@@ -7,7 +7,7 @@ import capitalizeWord from "@/utils";
 
 const getCategories = async () => {
   try {
-    const res = await fetch(`${process.env.API_URL}/api/categories`, {
+    const res = await fetch(`${process.env.API_URL}/categories`, {
       cache: "no-store",
     });
     if (!res.ok) {
