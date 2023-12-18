@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { shortenDesc } from "@/utils";
+import { makeUpperCase, shortenDesc } from "@/utils";
 
 const Card = ({ key, title, desc, img, cat }) => {
   return (
@@ -13,7 +13,7 @@ const Card = ({ key, title, desc, img, cat }) => {
       <div className={styles.textContainer}>
         <div className={styles.details}>
           <span className={styles.date}>11.05.20</span>
-          <span className={styles.category}> - CULTURE {cat}</span>
+          <span className={styles.category}> - {makeUpperCase(cat)}</span>
         </div>
         <Link href={"/"}>
           <h2>{title}</h2>
