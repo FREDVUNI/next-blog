@@ -29,7 +29,7 @@ const Cards = async ({ page }) => {
             title={post.title}
             desc={post.desc}
             img={post.img}
-            category={post.cat}
+            cat={post.cat}
           />
         ))}
       </div>
