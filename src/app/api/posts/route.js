@@ -9,7 +9,7 @@ export const GET = async (req) => {
   try {
     const posts = await prisma.post.findMany({
       take: POST_PER_PAGE,
-      skip: page - 1,
+      skip: (page - 1),
     });
     return new NextResponse(
       JSON.stringify(posts, {
