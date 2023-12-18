@@ -3,7 +3,7 @@ import styles from "./categories.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { categories } from "./data";
-import capitalizeWord from "@/utils";
+import { capitalizeWord } from "@/utils";
 
 const getCategories = async () => {
   try {
