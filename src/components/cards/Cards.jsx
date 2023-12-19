@@ -13,13 +13,14 @@ const getPosts = async (page) => {
     }
     return res.json();
   } catch (error) {
-    console.log(error);
+    console.log('Error fetching posts:', error);
+    throw error; 
   }
 };
 
 const Cards = async ({ page }) => {
   const { posts, count } = await getPosts(page);
-
+  console.log({posts:posts,count:count})
   const POST_PER_PAGE = 2;
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
