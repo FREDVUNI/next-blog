@@ -18,7 +18,7 @@ const getPosts = async (page) => {
   }
 };
 
-const Cards = async ({ page }) => {
+const Cards = async ({ page  }) => {
   const { posts, count } = await getPosts(page);
   const POST_PER_PAGE = 2;
 
