@@ -9,12 +9,12 @@ const Pagination = ({ page, hasNext, hasPrev }) => {
 
   const handleNext = () => {
     let nextPage = page + 1;
-    return router.push(`?page =${nextPage}`);
+    return router.push(`?page=${nextPage}`);
   };
 
   const handlePrev = () => {
     let prevPage = page - 1;
-    return router.push(`?page =${prevPage}`);
+    return router.push(`?page=${prevPage}`);
   };
 
   return (
