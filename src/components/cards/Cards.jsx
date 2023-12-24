@@ -13,17 +13,19 @@ const getPosts = async (page) => {
     }
     return res.json();
   } catch (error) {
-    console.log('Error fetching posts:', error);
-    throw error; 
+    console.log("Error fetching posts:", error);
+    throw error;
   }
 };
 
-const Cards = async ({ page  }) => {
+const Cards = async ({ page }) => {
   const { posts, count } = await getPosts(page);
   const POST_PER_PAGE = 2;
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
+
+  // const postsRef = useRef(null);
 
   return (
     <div className={styles.container}>
@@ -39,7 +41,12 @@ const Cards = async ({ page  }) => {
           />
         ))}
       </div>
-      <Pagination page={page} hasNext={hasNext} hasPrev={hasPrev} />
+      <Pagination
+        page={page}
+        hasNext={hasNext}
+        hasPrev={hasPrev}
+        // postsRef={postsRef}
+      />
     </div>
   );
 };
