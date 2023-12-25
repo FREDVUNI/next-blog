@@ -4,16 +4,6 @@ import React from "react";
 import styles from "./pagination.module.css";
 import { useRouter } from "next/navigation";
 
-const scrollToBlogPosts = () => {
-  const blogPosts = document.getElementById('blog-posts');
-  if (blogPosts) {
-    blogPosts.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-  }
-};
-
 const Pagination = ({ page, hasNext, hasPrev }) => {
   const router = useRouter();
 
