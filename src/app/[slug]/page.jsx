@@ -15,7 +15,7 @@ const SinglePage = async () => {
           </h1>
           <div className={styles.user}>
             <div className={styles.userImageContainer}>
-              <Image src={"/p1.jpeg"} alt="" fill className={styles.avatar} />
+              <Image src={"/p1.jpeg"} alt="avatar" fill className={styles.avatar} />
             </div>
             <div className={styles.userTextContainer}>
               <span className={styles.username}>John Doe</span>
