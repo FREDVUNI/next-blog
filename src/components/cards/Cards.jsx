@@ -3,11 +3,14 @@ import styles from "./cards.module.css";
 import Pagination from "../pagination/Pagination";
 import Card from "../card/Card";
 
-const getPosts = async (page) => {
+const getPosts = async (page, cat) => {
   try {
-    const res = await fetch(`${process.env.API_URL}/posts?page=${page}`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.API_URL}/posts?page=${page}&cat=${cat || ""}`,
+      {
+        cache: "no-store",
+      }
+    );
     if (!res.ok) {
       throw new Error("No posts found.");
     }
@@ -18,8 +21,8 @@ const getPosts = async (page) => {
   }
 };
 
-const Cards = async ({ page }) => {
-  const { posts, count } = await getPosts(page);
+const Cards = async ({ page, cat }) => {
+  const { posts, count } = await getPosts(page, cat);
   const POST_PER_PAGE = 2;
 
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
@@ -36,14 +39,11 @@ const Cards = async ({ page }) => {
             desc={post.desc}
             img={post.img}
             cat={post.catSlug}
+            createdAt={post.createdAt}
           />
         ))}
       </div>
-      <Pagination
-        page={page}
-        hasNext={hasNext}
-        hasPrev={hasPrev}
-      />
+      <Pagination page={page} hasNext={hasNext} hasPrev={hasPrev} />
     </div>
   );
 };
