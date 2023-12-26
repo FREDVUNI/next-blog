@@ -28,7 +28,7 @@ const Categories = async () => {
         {categories &&
           categories.map((category) => (
             <Link
-              href={`/blog?category=${category.title}`}
+              href={`/blog?cat=${category.title}`}
               className={`${styles.category} ${styles[category.title]}`}
               key={category.id}
             >
