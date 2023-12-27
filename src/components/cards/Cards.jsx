@@ -6,7 +6,7 @@ import Card from "../card/Card";
 const getPosts = async (page, cat) => {
   try {
     const res = await fetch(
-      `${process.env.API_URL}/posts?page=${page}&cat=${cat || ""}`,
+      `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
       {
         cache: "no-store",
       }
