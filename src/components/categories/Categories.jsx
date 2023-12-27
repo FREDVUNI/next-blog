@@ -30,7 +30,7 @@ const Categories = async () => {
             <Link
               href={`/blog?cat=${category.title}`}
               className={`${styles.category} ${styles[category.title]}`}
-              key={category.id}
+              key={category._id}
             >
               <Image
                 src={category.img}
