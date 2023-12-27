@@ -25,6 +25,7 @@ const Cards = async ({ page, cat }) => {
   const { posts, count } = await getPosts(page, cat);
   const POST_PER_PAGE = 2;
 
+
   const hasPrev = POST_PER_PAGE * (page - 1) > 0;
   const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
 
@@ -39,7 +40,6 @@ const Cards = async ({ page, cat }) => {
             desc={post.desc}
             img={post.img}
             cat={post.catSlug}
-            createdAt={post.createdAt}
           />
         ))}
       </div>
