@@ -40,6 +40,7 @@ const Cards = async ({ page, cat }) => {
             img={post.img}
             cat={post.catSlug}
             createdAt={post.createdAt}
+            slug={post.slug}
           />
         ))}
       </div>
