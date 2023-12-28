@@ -4,7 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { makeUpperCase, shortenDesc } from "@/utils";
 
-const Card = ({ key, title, desc, img, cat }) => {
+const Card = ({ key, title, desc, img, cat, createdAt }) => {
+  const formattedDate = new Date(createdAt).toISOString().split('T')[0];
   return (
     <div className={styles.container} key={key}>
       <div className={styles.imageContainer}>
@@ -12,7 +13,7 @@ const Card = ({ key, title, desc, img, cat }) => {
       </div>
       <div className={styles.textContainer}>
         <div className={styles.details}>
-          <span className={styles.date}>11.05.20</span>
+          <span className={styles.date}>{formattedDate}</span>
           <span className={styles.category}> - {makeUpperCase(cat)}</span>
         </div>
         <Link href={"/"}>
