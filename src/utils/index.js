@@ -13,3 +13,7 @@ export const shortenDesc = (desc, maxLength) => {
   return desc;
 };
 
+export const formatDate = (date) =>{
+  return new Date(date).toISOString().split("T")[0];
+}
+
