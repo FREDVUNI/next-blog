@@ -9,7 +9,7 @@ export const GET = async (req) => {
   try {
     const comments = await prisma.comment.findMany({
       where: {
-        ...GET(postSlug && { postSlug }),
+        ...(postSlug && { postSlug }),
       },
       include: {
         user: true,
@@ -18,7 +18,7 @@ export const GET = async (req) => {
 
     return new NextResponse(JSON.stringify(comments, { status: 200 }));
   } catch (error) {
-    return NextResponse(
+    return new NextResponse(
       json.stringify(
         {
           message: "something went wrong.",
@@ -33,10 +33,10 @@ export const POST = async (req) => {
   const session = await getAuthSession();
 
   if (!session)
-    return NextResponse(
+    return new NextResponse(
       json.stringify(
         {
-          message: "You\'re not authenticated.",
+          message: "You're not authenticated.",
         },
         { status: 401 }
       )
@@ -49,8 +49,7 @@ export const POST = async (req) => {
     });
 
     return new NextResponse(JSON.stringify(comment, { status: 200 }));
-  } catch (err) {
-    console.log(err);
+  } catch (error) {
     return new NextResponse(
       JSON.stringify({ message: "Something went wrong." }, { status: 500 })
     );
