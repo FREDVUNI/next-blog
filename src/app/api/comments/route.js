@@ -1,5 +1,6 @@
 import prisma from "@/utils/connect";
 import { NextResponse } from "next/server";
+import { getAuthSession } from "@/utils/auth";
 
 export const GET = async (req) => {
   const { searchParams } = new URL(req.url);
@@ -35,7 +36,7 @@ export const POST = async (req) => {
     return NextResponse(
       json.stringify(
         {
-          message: "You're not authenticated.",
+          message: "You\'re not authenticated.",
         },
         { status: 401 }
       )
