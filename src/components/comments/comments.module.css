@@ -19,11 +19,20 @@
 .input {
   padding: 20px;
   width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D1D5DB;
+  background-color: transparent;
+  background-clip: padding-box;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #4B5563;
+  outline: none;
 }
 .input::placeholder{
-    font-size: 20px;
+  font-size: 20px;
+  color: #6B7280;
 }
-
 .button {
   padding: 16px 20px;
   background-color: teal;
@@ -32,6 +41,7 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 18px;
 }
 
 .comments {
