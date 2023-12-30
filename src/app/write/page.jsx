@@ -72,6 +72,11 @@ const WritePage = () => {
     router.push("/");
   }
   const handleSubmit = async () => {
+    if (!media) {
+      console.log("Media is not yet uploaded");
+      return;
+    }
+
     const res = await fetch("/api/posts", {
       method: "POST",
       body: JSON.stringify({
