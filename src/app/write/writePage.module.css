@@ -11,6 +11,13 @@
   height: 50px;
   font-size: 20px;
   cursor: pointer;
+  border-style: solid;
+  border-color: #D1D5DB;
+  background-color: transparent;
+  background-clip: padding-box;
+  font-weight: normal;
+  color: #4B5563;
+  outline: none;
   /* width: max-content; */
 }
 .select > option:hover{
@@ -67,7 +74,10 @@
 .textArea {
   width: 100%;
 }
-
+.textArea::placeholder{
+  font-size: 20px;
+  color: #6B7280;
+}
 .publish {
   position: absolute;
   top: 0px;
