@@ -13,7 +13,15 @@ export const shortenDesc = (desc, maxLength) => {
   return desc;
 };
 
-export const formatDate = (date) =>{
+export const formatDate = (date) => {
   return new Date(date).toISOString().split("T")[0];
-}
+};
 
+export const slugify = (str) => {
+  return str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, "")
+    .replace(/[\s_-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+};
