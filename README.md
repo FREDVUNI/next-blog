@@ -168,6 +168,11 @@ Visit `http://localhost:3000` in your browser to access the application.
 
 API routes in the `api/` directory handle CRUD operations for blog posts. You can customize and extend these routes as needed.
 
+## screenshot
+
+![image](https://github.com/FREDVUNI/next-blog/assets/41730664/f8e80abf-3cde-42d1-b22d-773a8a18b747)
+
+
 ## 🤝 Contributing
 
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
