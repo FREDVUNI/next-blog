@@ -63,8 +63,8 @@ const WritePage = () => {
           }
         );
       };
+      file && upload();
     }
-    file && upload();
   }, [file]);
 
   if (status === "loading") {
