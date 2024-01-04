@@ -13,7 +13,7 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import ReactQuill from "react-quill";
+// import ReactQuill from "react-quill";
 import { slugify } from "@/utils";
 import dynamic from "next/dynamic";
 
