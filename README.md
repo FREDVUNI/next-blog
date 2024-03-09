@@ -170,6 +170,8 @@ API routes in the `api/` directory handle CRUD operations for blog posts. You ca
 
 ## screenshot
 
+![image](https://github.com/FREDVUNI/next-blog/assets/41730664/943aa585-f023-4df6-8fea-994d61dc5bf9)
+
 ![image](https://github.com/FREDVUNI/next-blog/assets/41730664/f8e80abf-3cde-42d1-b22d-773a8a18b747)
 
 
