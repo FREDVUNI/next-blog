@@ -5,12 +5,10 @@ import Card from "../card/Card";
 
 const getPosts = async (page, cat) => {
   try {
-    const res = await fetch(
-      `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
-      {
-        cache: "no-store",
-      }
-    );
+    const apiUrl = process.env.API_URL;
+    const res = await fetch(`${apiUrl}/posts?page=${page}&cat=${cat || ""}`, {
+      cache: "no-store",
+    });
     if (!res.ok) {
       throw new Error("No posts found.");
     }
