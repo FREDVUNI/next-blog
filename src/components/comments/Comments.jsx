@@ -23,9 +23,10 @@ const getComments = async (url) => {
 
 const Comments = ({ postSlug }) => {
   const { status } = useSession();
+  const apiUrl = process.env.API_URL;
 
   const { data, mutate, isLoading } = useSWR(
-    `http://localhost:3000/api/comments?postSlug=${postSlug}`,
+    `${apiUrl}/comments?postSlug=${postSlug}`,
     getComments
   );
 
